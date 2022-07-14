@@ -17,25 +17,31 @@
         <article class="ImagenRegistro">
              <img src="{% static 'img/ImagenRegistro.png' %}">
         </article>
-       
+
           <form method="POST">
               {% csrf_token %}
-           <div class="LogoRegistro" >
-               <img src="{% static 'img/logo.png' %}">
-               <h3>Registrate</h3>
-            </div>
-              <div class="FormularioRegistro">
-                    {{form}}
-              </div>
-              <div>
-                  <button type="submit">Enviar</button>
-              </div>
 
+           <div class="container2">
+                <div class="Logo">
+                    <img src="{% static 'img/logo.png' %}">
+                </div>
+                <div class="LogoRegistro">
+                        <h3>Registrate</h3>
+                </div>
+                <div class="Formulario">
+                    {% for field in form %}
+                        {{field.label}}
+                        {{field}}
+                    {% endfor %}
+                </div>
+                <div>
+                  <button class="btn-add3" type="submit">Enviar</button>
+
+                </div>
+           </div>
        </form>
        </div>
-    
-    
-    
+
     </body>
-    
+
 </html>

@@ -13,22 +13,32 @@
 
 <body>
 
+<div class="containerCalificaciones">
 
-<form method="POST">
-      <h1>Editar calificaciones</h1>
+    <div class="logout">
+        <a class="salir" href="{% url 'enlaceSalir' %}">Salir</a>
+        <span class="user">
+                        <h2> Nombre de Usuario: {{ user.username }}</h2>
+                    </span>
+    </div>
+
+    <h1 class="title">Editar calificaciones</h1>
+
+<div class="square2">
+
+
+
+<form class="edit" method="POST">
+
         {{formaCalifica}}
 
 
-      <button type="submit">Enviar</button>
+      <button class="btn-add2" type="submit">Enviar</button>
       {% csrf_token %}
       <!--variable para pasar validación-->
   </form>
 
-
-
-
-
-
+</div>
 
 </body>
 </html>

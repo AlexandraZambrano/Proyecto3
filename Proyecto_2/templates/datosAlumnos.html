@@ -7,65 +7,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coders University</title>
     <!-- carga css  -->
-   <link href="{% static 'css/style.css' %}" rel="stylesheet" media="all" type="text/css">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" media="all" type="text/css">
     <!--<link rel="stylesheet" href="style.css">-->
 </head>
 
 <body>
 
 
+<div class="containerCalificaciones">
 
-    <div class="containerCalificaciones">
-            <article class="logoCal">
-                <!--carga imagen -->
-                <img src="{% static 'img/logo.png' %}">
-                        <a href="{% url 'enlaceSalir' %}">Salir</a>
-                         {{ user.username }}
-                <h3>Grupo 1 - Introducción a la programación</h3>
-            </article>
+    <div class="logout">
+        <a class="salir" href="{% url 'enlaceSalir' %}">Salir</a>
+        <span class="user">
+                        <h2> Nombre de Usuario: {{ user.username }}</h2>
+                    </span>
     </div>
-            <div class="containerTabla"><br>
-                <h4>Turno: Mañana</h4>
+    <article class="logoCal">
+        <!--carga imagen -->
+        <img src="{% static 'img/logo.png' %}">
+        <h3>Grupo 1 - Introducción a la programación</h3>
+    </article>
+</div>
+<div class="containerTabla"><br>
+    <h4>Turno: Mañana</h4>
 
-                    <table class="InfoGrupo">
+    <table class="InfoGrupo">
 
-            <thead class="TitulosGrupo1">
-            <tr>
-                <th>Alumno</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>DNI</th>
-                <th>Email</th>
-            </tr>
+        <thead class="TitulosGrupo1">
+        <tr>
+            <th style="padding: 3%;">Alumno</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>DNI</th>
+            <th>Email</th>
+        </tr>
 
-            </thead>
-            <tbody>
-             {% for x in alumno %}
-            <tr>
-                <td>{{x.id}}</td>
-                <td>{{x.nombre}}</td>
-                <td>{{x.apellido}}</td>
-                <td>{{x.dni}}</td>
-                <td>{{x.email}}</td>
+        </thead>
+
+        <tbody>
+
+        {% for x in alumno %}
+        <tr>
+            <td class="id">{{x.id}}</td>
+            <td>{{x.nombre}}</td>
+            <td>{{x.apellido}}</td>
+            <td>{{x.dni}}</td>
+            <td>{{x.email}}</td>
 
 
-                <td><a href="rutaEditarAlumno/{{x.id}}">Editar</a></td>
-                <td><a href="rutaEliminarAlumno/{{x.id}}">Eliminar</a></td>
+            <td><a href="rutaEditarAlumno/{{x.id}}">Editar</a></td>
+            <td><a href="rutaEliminarAlumno/{{x.id}}">Eliminar</a></td>
 
-            </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-                <br><br><br>
-                <a href="{% url 'agregarNuevo' %}">Agregar Alumno</a>
+        </tr>
+        {% endfor %}
+        </tbody>
 
-                <!--acaba el for-->
-            </div>
+    </table>
+    <a class="add" href="{% url 'agregarNuevo' %}">Agregar Alumno</a>
+
+    <!--acaba el for-->
+
+
+
+</div>
 
     <a href="{% url 'enlaceDatosCalificaciones' %}">
-    <button>Ver Notas</button> </a>
-
-
+    <button class="notas">Ver Notas</button>
+</a>
 
 
 </body>

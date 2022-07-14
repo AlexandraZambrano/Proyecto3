@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    {% extends 'base.html' %}
+    {% load static %}
+    {% block content %}
+
+ <h1>HOLA</h1>
+
+    <table>
+    <thead class="TitulosGrupo1">
+            <tr>
+                <th>Alumno</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>DNI</th>
+                <th>Email</th>
+            </tr>
+
+            </thead>
+            <tbody>
+             {% for x in alumno %}
+            <tr>
+                <td>{{x.id}}</td>
+                <td>{{x.nombre}}</td>
+                <td>{{x.apellido}}</td>
+                <td>{{x.dni}}</td>
+                <td>{{x.email}}</td>
+
+
+                <td><a href="rutaEditarAlumno/{{x.id}}">Editar</a></td>
+                <td><a href="rutaEliminarAlumno/{{x.id}}">Eliminar</a></td>
+
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    {% endblock content %}
+
+</body>
+</html>

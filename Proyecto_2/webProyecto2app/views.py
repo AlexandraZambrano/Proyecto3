@@ -1,12 +1,13 @@
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
+from django.contrib.auth.models import UserCreationForm
 from django.forms import modelform_factory
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 
 # Create your views here.
-from django.contrib.auth.forms import UserCreationForm
+from .models import *
+from .forms import CreateUserForm
 from django.contrib import messages
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
@@ -97,13 +98,17 @@ def salir(request):
 # Create your views here.
 
 def registro(request):
+    form = CreateUserForm()
+
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CreateUserForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data['username']
             form.save()
-            return redirect('/') #para que te lleve directamente a la vista seria la otra ruta ----listaDatosAlumnos
+
+        context = {'form' : form}
+        return redirect('/') #para que te lleve directamente a la vista seria la otra ruta ----listaDatosAlumnos
     else:
-        form = UserCreationForm()
+        form = CreateUserForm()
     context = {'form': form}
     return render(request,'registration/registro.html',context)

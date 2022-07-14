@@ -14,7 +14,7 @@
 
 <body>
 
-    <section>
+    <section class="page">
 
         <div class="container">
             <article class="Logo">
@@ -33,14 +33,16 @@
                 </label><br>
                 <label for="Contraseña">contraseña
                 	    <input type="password" name="password">
-                </label><br>
+                </label>
 
+                 <br>
+                 <a class="forgot" href="#">¿Olvidaste tu contraseña?</a>
+                 <br>
 
-                 <article class="BotonLogin">
+                 <div class="BotonLogin">
                         <button type="submit">Iniciar Sesion</button><br>
-                </article>
-                 <a href="">¿Olvidaste tu contraseña?</a><br>
-                 <a href ="{% url 'enlaceRegistro' %}">Registro</a><br>
+                       <button type="submit" ><a href ="{% url 'enlaceRegistro' %}">Registro </a></button><br>
+                </div>
             </article>
 
     </form>

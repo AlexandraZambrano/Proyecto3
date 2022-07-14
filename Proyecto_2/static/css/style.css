@@ -14,9 +14,9 @@
     }
 
     .container {
-        margin-left: 100px;
+        margin-left: 20px;
         background-color: #FFF4E1;
-
+        height: 100vh;
     }
     .Logo{
         grid-area: 'Logo';
@@ -40,6 +40,13 @@
         margin-top: 3rem;
     }
 
+    .container2{
+        padding: 30px;
+        background-color: #FFF4E1;
+        width: 100%;
+        height: 89vh;
+    }
+
     .Identificate{
         display: grid;
         grid-area: 'Identificate';
@@ -57,7 +64,6 @@
     .Formulario label {
         color: #D4696C;
         font-size: 18px;
-
         margin-left: 40px;
         font-weight: bold;
         width: 400px;
@@ -68,22 +74,35 @@
 
     }
     input {
-        height: 25px;
         width: 300px;
         padding: 12px 20px;
         background-color: #FFF4E1;
         border:solid 2px;
         border-radius: 8px;
         border-color: #038554;
+    }
 
-
+    .btn-add3{
+        padding: 12px 0px;
+        background-color: #68DDBD;
+        border-color: #68DDBD;
+        font-size: 20px;
+        color: #D4696C;
+        font-weight: bold;
+        margin: 0 40%;
+        margin-top: 7%;
+        width: 30%;
+        border-radius: 20px;
     }
 
     a {
         font-weight: bold;
         color: #038554;
         text-decoration: none;
-        margin-left: 40px;
+    }
+
+    a .forgot{
+        margin-left:5px;
     }
 
     .BotonLogin{
@@ -91,7 +110,15 @@
         justify-content: space-around;
         margin-top: 15px;
         margin-bottom: 6rem;
+        cursor: pointer;
     }
+
+    .BotonLogin a{
+        font-weight: bold;
+        color: #D4696C;
+        text-decoration: none;
+     }
+
     button {
         width:40%;
         padding: 12px 20px;
@@ -101,8 +128,7 @@
         font-size:20px;
         color: #D4696C;
         font-weight: bold;
-
-
+        margin-top: 0;
     }
 
     .ImagenAvatar{
@@ -157,8 +183,7 @@
         flex-direction: column;
         align-content: center;
         background-color:#FFF4E1;
-        width: 750px;
-        height: 890px;
+        margin: 0 5%;
 
      }
 
@@ -167,7 +192,7 @@
         justify-content: center;
      }
 
-     .input {
+    .input {
         padding: 12px 20px;
         background-color: #FFF4E1;
         border:solid 2px;
@@ -177,52 +202,48 @@
         color: #D4696C;
         margin-top: 10px;
         margin-bottom: 10px;
-     }
+    }
 
-     .input input {
+    .input input {
         font-size: 20px;
         color: #D4696C;
 
-     }
+    }
 
-     .but{
+    .but{
         width: 150px;
         height: 50px;
         padding: 12px 20px;
         border-radius: 8px;
         background-color: #68DDBD;
-        border-color: #68DDBD;
         font-size: 20px;
         color: #D4696C;
         font-weight: bold;
-
         margin-top: 15px;
         margin-bottom: 30px;
 
-     }
+    }
 
 
 
-     a {
+    .salir a {
         text-decoration:none;
-        color: #D4696C;
+        color:#038554;
         font-size: 20px;
         font-family: Arial, Helvetica, sans-serif;
-        text-align: right;
-        margin-right: 50px;
-
-     }
+        margin-left: 50px;
+    }
 
 
     /*Cierre Seccion Registrate*/
 
     /*Seccion de calificaciones*/
+
     .logoCal h3 {
        text-align: center;
        color: #D4696C;
         font-size: 30px;
         font-family: Arial, Helvetica, sans-serif;
-
     }
 
     .logoCal img {
@@ -232,6 +253,39 @@
         margin-top: 3rem;
         display: grid;
         align-item: center;
+    }
+
+    .user{
+    display: flex;
+    justify-content: center;
+    background-color: #FFF4E1;
+    padding: 0%;
+    border-radius: 30px;
+    border: 3px solid black;
+    width: 15%;
+    }
+
+    .user h2{
+        font-size: 15px;
+    }
+
+    .logout{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+    margin: 3% 2%;
+}
+    }
+
+    .containerTabla{
+        list-style-type: none;
+        background-color: #FFF4E1;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 15px;
+        padding: 10%;
 
     }
 
@@ -241,7 +295,31 @@
         margin-left: 20px;
         margin-right: 20px;
         border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2% 3%;
+    }
 
+    .containerTabla2{
+        list-style-type: none;
+        background-color: #FFF4E1;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2% 3%;
+        margin-bottom: 5%;
+    }
+
+    .containerTabla2 h4 {
+        color: #D4696C;
+        font-weight: bold;
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 25px;
     }
 
     .containerTabla h4 {
@@ -249,22 +327,111 @@
         font-weight: bold;
         margin-left: 20px;
         margin-top: 20px;
+        font-size: 25px;
+    }
 
-
+    .heading{
+    display: flex;
     }
 
     .InfoGrupo{
-        margin-right: 30px;
-        margin-left: 30px;
+        text-align: -webkit-match-parent;
+        margin: 0 15%;
+    }
+
+    .InfoGrupo2{
+        text-align: -webkit-match-parent;
+        margin: 0 15%;
+        text-align: center;
+    }
+
+    .id{
+        text-align: center;
     }
 
     .TitulosGrupo1 tr {
-        margin-right: 10px;
-        margin-left: 10px;
+        color: #D4696C;
+    }
+
+    .notas{
+        margin: 5% 43%;
+        display: flex;
+        justify-content: center;
+        border-radius: 15px;
+        padding: 1% 2%;
+        width: auto;
+    }
+
+    .add{
+        font-size: 25px;
+        color: #D4696C;
+        margin-top: 25px;
+    }
+
+    .title{
+        background-color: #68DDBD40;
+        text-align: center;
+        padding: 1%;
+        margin: 0 8%;
+    }
+
+    .addAl{
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+    }
+
+    .btn-add{
+    padding: 12px 0px;
+    background-color: #68DDBD;
+    border-color: #68DDBD;
+    font-size: 20px;
+    color: #D4696C;
+    font-weight: bold;
+    margin: 0 42%;
+    margin-top: 7%;
+    width: 20%;
+    border-radius: 20px;
+    }
+
+    .btn-add2{
+    padding: 12px 0px;
+    background-color: #68DDBD;
+    border-color: #68DDBD;
+    font-size: 20px;
+    color: #D4696C;
+    font-weight: bold;
+    margin: 0 35%;
+    margin-top: 7%;
+    width: 35%;
+    border-radius: 20px;
+    }
+
+    .square{
+        background-color: #FFF4E1;
+        margin: 5% 30%;
+        padding: 3% 0%;
+        border-radius: 12px;
+        border: 2px solid black;
+    }
+
+    .edit{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .square2{
+        background-color: #FFF4E1;
+        margin: 5% 30%;
+        padding: 3% 8%;
+        border-radius: 12px;
+        border: 2px solid black;
+    }
+
+    .page{
+        min-height: 100vh;
     }
     /*login*/
-    button{
- margin-top: 3rem;
-    }
 
     /*botones ver notas y agregar alumno*/

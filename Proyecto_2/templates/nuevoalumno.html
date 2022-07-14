@@ -7,15 +7,23 @@
     <link href="{% static 'css/style.css' %}" rel="stylesheet" media="all" type="text/css">
 </head>
 <body>
+<div class="containerCalificaciones">
+
+    <div class="logout">
+        <a class="salir" href="{% url 'enlaceSalir' %}">Salir</a>
+        <span class="user">
+                        <h2> Nombre de Usuario: {{ user.username }}</h2>
+                    </span>
+    </div>
     <form method="POST">
-        <h1>Agregar persona</h1>
-        <table>
+        <h1 class="title">Agregar persona</h1>
+        <div class="square">
+        <table class="addAl">
             {{formaAlumno}}
         </table>
-        <button type="submit">Registrar</button>
+        <button class="btn-add" type="submit">Registrar</button>
         {% csrf_token %}
-
-
     </form>
+</div>
 </body>
 </html>
