@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coders University</title>
+    <!-- carga css  -->
+   <link href="{% static 'css/style.css' %}" rel="stylesheet" media="all" type="text/css">
+    <!--<link rel="stylesheet" href="style.css">-->
+</head>
+
+<body>
+
+    <div class="containerCalificaciones">
+            <article class="logoCal">
+                <!--carga imagen -->
+                <img src="{% static 'img/logo.png' %}">
+                <h3>Grupo 1 - Introducción a la programación</h3>
+            </article>
+    </div>
+            <div class="containerTabla">
+                <h4>Turno: Mañana</h4>
+
+                    <table class="InfoGrupo">
+
+            <thead class="TitulosGrupo1">
+            <tr>
+                <th>Numero</th>
+                <th>Nombre</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Nota Final</th>
+            </tr>
+
+            </thead>
+            <tbody>
+             {% for x in notas %}
+            <tr>
+                <td>{{x.id}}</td>
+                <td>{{x.Alumno.nombre}}</td>
+                <td>{{x.nota1}}</td>
+                <td>{{x.nota2}}</td>
+                <td>{{x.notaFinal}}</td>
+                <td><a href=" {% url 'enlaceEditarCalificaciones' x.id %}">Editar</a></td>
+                <td><a href="{% url 'enlaceEliminarCalificaciones' x.id %}">Eliminar</a></td>
+
+
+
+
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+            </div>
+
+<a href="{% url 'enlaceAgregarCalificaciones' %}">Agregar Calificacion</a>
+</body>
+</html>

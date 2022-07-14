@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo Alumno</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" media="all" type="text/css">
+</head>
+<body>
+    <form method="POST">
+        <h1>Agregar persona</h1>
+        <table>
+            {{formaAlumno}}
+        </table>
+        <button type="submit">Registrar</button>
+        {% csrf_token %}
+
+
+    </form>
+</body>
+</html>

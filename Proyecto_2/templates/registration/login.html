@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<!--suppress XmlInvalidId -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coders University</title>
+    <!-- carga css  -->
+   <link href="{% static 'css/style.css' %}" rel="stylesheet" media="all" type="text/css">
+    <!--<link rel="stylesheet" href="style.css">-->
+</head>
+
+<body>
+
+    <section>
+
+        <div class="container">
+            <article class="Logo">
+                <!--carga imagen -->
+                <img src="{% static 'img/logo.png' %}">
+                <h3 class="Identificate">Identificate</h3>
+            </article>
+
+    <form method="POST" > <!-- con esto habria que ponerle a mano en el navegador la ruta en donde querramos que nos lleve en este caso rutaDatosAlumnos-->
+        <!--<form method="POST" action="{% url 'login'"       Con esto el boton del login nos lleva a una pagina que no encuentra pero no entiendo mucho que habra que hacer>-->
+        {% csrf_token %}
+        <!--suppress XmlInvalidId -->
+             <article class="Formulario">
+                <label for="Usuario">usuario
+                    <input type="text" name="username">
+                </label><br>
+                <label for="Contraseña">contraseña
+                	    <input type="password" name="password">
+                </label><br>
+
+
+                 <article class="BotonLogin">
+                        <button type="submit">Iniciar Sesion</button><br>
+                </article>
+                 <a href="">¿Olvidaste tu contraseña?</a><br>
+                 <a href ="{% url 'enlaceRegistro' %}">Registro</a><br>
+            </article>
+
+    </form>
+
+        </div>
+            <article class="ImagenAvatar">
+                <img src="{% static 'img/imagenIndex.png' %}">
+            </article>
+
+    </section>
+</body>
+</html>
+

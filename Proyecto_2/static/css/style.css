@@ -1,0 +1,270 @@
+    /*Seccion Login*/
+    body{
+         font-family: Arial, Helvetica, sans-serif;
+    }
+    section {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-areas: "Logo"
+                            "Identificate"
+                            "Formulario ImagenAvatar";
+        height: 900px;
+    }
+
+    .container {
+        margin-left: 100px;
+        background-color: #FFF4E1;
+
+    }
+    .Logo{
+        grid-area: 'Logo';
+        display: grid;
+        justify-content: center;
+
+    }
+    /* calificaciones*/
+    .logoCal{
+     justify-content: left;
+    }
+    .contenedorC{
+    margin-left: 100px;
+    background-color: #FFF4E1;
+    }
+    /*fin calificaciones*/
+    .Logo img {
+        height: 200px;
+        width: 200px;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    .Identificate{
+        display: grid;
+        grid-area: 'Identificate';
+        justify-content: center;
+        color: #D4696C;
+        font-size: 30px;
+        }
+
+    .Formulario {
+        display: grid;
+        grid-area: 'Formulario';
+        justify-content: center;
+    }
+
+    .Formulario label {
+        color: #D4696C;
+        font-size: 18px;
+
+        margin-left: 40px;
+        font-weight: bold;
+        width: 400px;
+
+    }
+    .Formulario input {
+        margin-left: 40px;
+
+    }
+    input {
+        height: 25px;
+        width: 300px;
+        padding: 12px 20px;
+        background-color: #FFF4E1;
+        border:solid 2px;
+        border-radius: 8px;
+        border-color: #038554;
+
+
+    }
+
+    a {
+        font-weight: bold;
+        color: #038554;
+        text-decoration: none;
+        margin-left: 40px;
+    }
+
+    .BotonLogin{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 15px;
+        margin-bottom: 6rem;
+    }
+    button {
+        width:40%;
+        padding: 12px 20px;
+        border-radius: 8px;
+        background-color: #68DDBD;
+        border-color: #68DDBD;
+        font-size:20px;
+        color: #D4696C;
+        font-weight: bold;
+
+
+    }
+
+    .ImagenAvatar{
+        grid-area: 'ImagenAvatar';
+    }
+
+    .ImagenAvatar img {
+        margin-top: 240px;
+        margin-left: 50px;
+        height: 550px;
+        width: 750px;
+    }
+
+    /*Cierre de Seccion Login*/
+
+    /*Seccion Registrate*/
+    .flex-container{
+        display:flex;
+        margin-right: 0%;
+        justify-content: space-around;
+     }
+
+     .LogoRegistro{
+        margin-top: 3rem;
+     }
+
+     .LogoRegistro img{
+        height: 200px;
+        width: 200px;
+        margin-left: 17rem;
+
+
+     }
+
+     .LogoRegistro h3 {
+        text-align:center;
+        color: #D4696C;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+     }
+
+     /*FORMULARIO*/
+     .ImagenRegistro img{
+        margin-top: 240px;
+        margin-left: 50px;
+        height: 450px;
+        width: 750px;
+     }
+
+     .Formulario {
+        display:flex;
+        flex-direction: column;
+        align-content: center;
+        background-color:#FFF4E1;
+        width: 750px;
+        height: 890px;
+
+     }
+
+     .FormularioRegistro{
+        display: grid;
+        justify-content: center;
+     }
+
+     .input {
+        padding: 12px 20px;
+        background-color: #FFF4E1;
+        border:solid 2px;
+        border-radius: 8px;
+        border-color:#038554;
+        font-size: 18px;
+        color: #D4696C;
+        margin-top: 10px;
+        margin-bottom: 10px;
+     }
+
+     .input input {
+        font-size: 20px;
+        color: #D4696C;
+
+     }
+
+     .but{
+        width: 150px;
+        height: 50px;
+        padding: 12px 20px;
+        border-radius: 8px;
+        background-color: #68DDBD;
+        border-color: #68DDBD;
+        font-size: 20px;
+        color: #D4696C;
+        font-weight: bold;
+
+        margin-top: 15px;
+        margin-bottom: 30px;
+
+     }
+
+
+
+     a {
+        text-decoration:none;
+        color: #D4696C;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: right;
+        margin-right: 50px;
+
+     }
+
+
+    /*Cierre Seccion Registrate*/
+
+    /*Seccion de calificaciones*/
+    .logoCal h3 {
+       text-align: center;
+       color: #D4696C;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .logoCal img {
+        height: 200px;
+        width: 200px;
+        margin: auto;
+        margin-top: 3rem;
+        display: grid;
+        align-item: center;
+
+    }
+
+    .containerTabla{
+        list-style-type: none;
+        background-color: #FFF4E1;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 15px;
+
+    }
+
+    .containerTabla h4 {
+        color: #D4696C;
+        font-weight: bold;
+        margin-left: 20px;
+        margin-top: 20px;
+
+
+    }
+
+    .InfoGrupo{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .TitulosGrupo1 tr {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    /*login*/
+    button{
+ margin-top: 3rem;
+    }
+
+    /*botones ver notas y agregar alumno*/
